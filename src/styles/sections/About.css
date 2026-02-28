@@ -1,0 +1,215 @@
+/* =========================
+    About Top
+========================= */
+
+.about{
+  width: 100%;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* 섹션 타이틀 */
+.about-me{
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 18px;
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+/* 사진 | 정보 그리드 */
+.about-me-top{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  align-items: stretch;
+  text-align: left; /* 내부는 왼쪽 정렬 */
+}
+
+/* 프로필 이미지 */
+.photo{
+  width: 280px; 
+}
+.photo img{
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+/* 인적사항 6개: 2열 그리드 */
+.about-me-info-wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 40px;
+  height: 100%;
+}
+
+/* 카드(아이콘 + 텍스트 한 줄) */
+.about-me-info{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 16px;
+  
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+
+  color: rgba(255,255,255,0.86);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+.about-me-info:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.about-me-info img{
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  opacity: 0.9;
+}
+
+.info-text{ 
+  display:flex; 
+  flex-direction:column; 
+  gap:4px; 
+}
+
+.info-label{
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55);
+  opacity: 0.8;
+}
+
+.info-value{
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+}
+
+/* 6번카드 */
+
+.info-link{
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.35);
+  padding-bottom: 2px;
+  transition: opacity 150ms ease, border-color 150ms ease;
+}
+
+.info-link:hover{
+  opacity: 0.7;
+  border-bottom: 1px dashed rgba(255,255,255,0.7);
+}
+
+/* =========================
+   About Bottom (Certificates / Education)
+========================= */
+
+.about-bottom{
+  max-width: 1100px;
+  margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  text-align: left;
+}
+
+/* 블럭 카드 */
+.about-block{
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  padding: 26px 26px;
+}
+
+/* 블럭 제목 */
+.about-block-title{
+  margin: 0 0 16px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.04em;
+}
+
+/* 리스트 기본 */
+.about-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 리스트 한 줄 */
+.about-list-item{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* 왼쪽 텍스트 */
+.about-list-main{
+  color: rgba(255,255,255,0.88);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* 오른쪽 상태 */
+.about-list-sub{
+  color: rgba(255,255,255,0.55);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+/* 반응형 */
+@media (max-width: 860px){
+  .about{
+    padding: 90px 20px;
+  }
+
+  .about-me{
+    font-size: 2.0rem;
+  }
+
+  .about-me-top{
+    grid-template-columns: 1fr;
+    gap: 34px;
+    text-align: center;
+  }
+
+  .photo{
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .about-me-info-wrap{
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .about-bottom{
+    grid-template-columns: 1fr;
+  }
+}

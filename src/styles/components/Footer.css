@@ -1,0 +1,35 @@
+.footer {
+    height: 200px;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer_link {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+.footer_link img {
+    width: 40px;
+    cursor: pointer;
+}
+
+
+.footer_copy {
+    color:#878787;
+    font-size: 1.1rem;
+    padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .footer_link img {
+        width: 36px;
+    }
+    .footer_copy {
+        font-size: 0.8rem;
+    }
+}

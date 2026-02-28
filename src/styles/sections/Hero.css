@@ -1,0 +1,167 @@
+.hero{
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 64px 20px 96px; 
+  background:
+    radial-gradient(
+      800px 600px at 50% 35%,
+      rgba(80,120,255,0.12),
+      transparent 70%
+    ),
+    #0b0c10;
+}
+
+.hero-inner{
+  transform:translateY(-60px);
+  text-align: center;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-greet{
+  color: var(--sub);
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.hero-title{
+  line-height: 1.04;
+  letter-spacing: -0.8px;
+  margin: 6px 0 0;
+}
+
+.hero-role{
+  display: block;
+  font-size: clamp(44px, 5vw, 64px);
+  font-weight: 500;
+  opacity: 0.92;
+}
+
+.hero-name{
+  display: block;
+  font-size: clamp(60px, 6.5vw, 88px);
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero-desc{
+  color: var(--sub-light);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 640px;
+  margin-top: 10px;
+}
+
+.hero-scroll{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--sub);
+  margin-top: 14px;
+  opacity: 0.75;
+}
+
+.hero-scroll-text{
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* 기존 dot 대신 wheel 느낌 */
+.hero-scroll-dot{
+  width: 28px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(245,245,245,0.18);
+  position: relative;
+}
+
+.hero-scroll-dot::after{
+  content:"";
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  animation: wheel 1.4s infinite ease-in-out;
+}
+
+@keyframes wheel{
+  0%{ transform: translate(-50%, 0); opacity: 0.3; }
+  40%{ opacity: 1; }
+  100%{ transform: translate(-50%, 16px); opacity: 0.2; }
+}
+
+/* 하단 캡슐 네비 */
+.hero-nav{
+  position: absolute;
+  left: 50%;
+  bottom: 64px;
+  transform: translateX(-50%);
+  width: min(600px, calc(100% - 28px));
+  height: 54px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  
+}
+
+.hero-nav-item{
+  color: var(--sub);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  transition: 120ms ease;
+}
+
+.hero-nav-item:hover{
+  color: var(--text);
+  background: rgba(255,255,255,0.1);
+}
+
+.top-nav{
+  position: fixed;
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%) translateY(-6px);
+  width: min(600px, calc(100% - 28px));
+  height: 54px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+
+  z-index: 999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 180ms cubic-bezier(.2,.8,.2,1);
+}
+
+.top-nav.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
