@@ -144,6 +144,10 @@
   color: var(--text);
   opacity: 0.92;
 
+  white-space: pre-line;       
+  word-break: keep-all;       
+  overflow-wrap: break-word;  
+
   /* ✅ 스크롤 대신 줄 제한 */
   display: -webkit-box;
   -webkit-line-clamp: 5;

@@ -5,6 +5,7 @@ export const projects = [
     title: "Steam 웹사이트 리뉴얼", 
     img:"/images/thumb/project_steam_thumb.jpg",
     alt:"Steam 썸네일", 
+    detail_img:"/images/detail/steam_detail.jpg",
     skill:["html","css","JavaScript"],
     summary: "Vanilla JavaScript로 멀티 스텝 회원가입과 로컬스토리지 기반 로그인 흐름을 직접 구현한 프로젝트입니다.",
     bullets: [
@@ -34,6 +35,7 @@ export const projects = [
     title: "Lunest", 
     img:"/images/thumb/project_lunest_thumb.jpg",
     alt:"Lunest 썸네일", 
+    detail_img:"/images/detail/lunest_detail.jpg",
     skill:["html","css","JavaScript"],
     summary: "mp3 폴더의 여러 트랙을 재생하는 커스텀 오디오 플레이어와 cloneNode 기반 무한 캐러셀을 구현한 인터랙션 중심 프로젝트입니다.",
     bullets: [
@@ -63,6 +65,7 @@ export const projects = [
     title: "Study Dashboard",  
     img:"/images/thumb/project_study-dashboard_thumb.jpg",
     alt:"Study Dashboard 썸네일", 
+    detail_img:"/images/detail/study-dashboard_detail.jpg",
     skill:["Supabase","css","Javascript","React"],
     summary: "React와 Supabase를 활용해 사용자별 학습 데이터를 관리하고 주간 학습 시간을 시각화한 대시보드입니다.",
     bullets: [
@@ -92,6 +95,7 @@ export const projects = [
     title: "weather",  
     img:"/images/thumb/project_weather_thumb.jpg",
     alt:"weather 썸네일", 
+    detail_img:"/images/detail/weather_detail.jpg",
     skill:["html","css","JavaScript","React"],
     summary: "OpenWeatherMap API를 활용해 현재 날씨와 예보 데이터를 가공·시각화한 날씨 애플리케이션입니다.",
     bullets: [

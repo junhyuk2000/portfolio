@@ -8,6 +8,7 @@ export default function Modal({ onClose, project }) {
   const {
     title,
     img,
+    detail_img,
     skill,
     links
   } = project;
@@ -54,7 +55,7 @@ export default function Modal({ onClose, project }) {
         <div className="pm-body">
           {/* LEFT: IMAGE */}
           <div className="pm-left">
-            <img src={img} alt={title} className="pm-img" />
+            <img src={detail_img} alt={title} className="pm-img" />
           </div>
 
           <div className="pm-right">
