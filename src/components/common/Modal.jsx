@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import "../../styles/components/Modal.css";
 
+
 export default function Modal({ onClose, project }) {
   if (!project) return null;
 
@@ -8,11 +9,11 @@ export default function Modal({ onClose, project }) {
     title,
     img,
     skill,
-    url,
-    github,
-    featured, // StudyDashboard 강조용(있으면 true)
+    links
   } = project;
 
+  const url = links?.live;
+  const github = links?.github;
 
 
   // skill이 문자열("html, css, js")이든 배열이든 칩으로 통일
@@ -27,7 +28,7 @@ export default function Modal({ onClose, project }) {
   return (
     <div className="pm-overlay" onClick={onClose} role="dialog" aria-modal="true">
       <div
-        className={`pm-modal ${featured ? "is-featured" : ""}`}
+        className="pm-modal"
         onClick={(e) => e.stopPropagation()}
       >
         {/* HEADER */}
