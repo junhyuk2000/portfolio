@@ -1,5 +1,6 @@
 import "../styles/sections/Skill.css"
 import { CORE_SKILLS, STRENGTHS, TOOLS } from "../data/skills"
+
 function SkillCard({ title, desc, tags, icon: Icon, colorKey }) {
   return (
     <article className="skill-card">
@@ -35,7 +36,7 @@ export default function Skill() {
         <div className="skill-top-grid">
           <article className="skill-panel">
             <h3 className="skill-panel-title">Core Stack</h3>
-            <p className="skill-panel-desc">HTML / CSS / JavaScript / React</p>
+            <p className="skill-panel-desc">HTML / CSS / TypeScript / React</p>
 
             <div className="skill-core-grid">
               {CORE_SKILLS.map((s) => (

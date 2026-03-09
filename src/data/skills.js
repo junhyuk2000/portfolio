@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact} from "react-icons/si";
+import { SiHtml5, SiCss3, SiTypescript, SiReact} from "react-icons/si";
 
 export const CORE_SKILLS = [
   {
@@ -16,11 +16,11 @@ export const CORE_SKILLS = [
     colorKey: "css"
   },
   {
-    title: "JavaScript",
-    icon: SiJavascript,
-    desc: "이벤트 기반 UI 로직과 데이터 처리(검증/저장/예외처리)를 구현합니다.",
-    tags: ["es6+", "async-await", "fetch", "error-handling"],
-    colorKey: "js"
+    title: "TypeScript / JavaScript",
+    icon: SiTypescript,
+    desc: "ES6+ 기반 비동기 로직과 TypeScript 타입 시스템을 활용하여 데이터 흐름과 상태 관리를 구현합니다.",
+    tags: ["types", "interface", "props", "api-types"],
+    colorKey: "ts"
   },
   {
     title: "React",

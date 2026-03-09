@@ -66,15 +66,15 @@ export const projects = [
     img:"/images/thumb/project_study-dashboard_thumb.jpg",
     alt:"Study Dashboard 썸네일", 
     detail_img:"/images/detail/study-dashboard_detail.jpg",
-    skill:["Supabase","css","Javascript","React"],
-    summary: "React와 Supabase를 활용해 사용자별 학습 데이터를 관리하고 주간 학습 시간을 시각화한 대시보드입니다.",
+    skill:["React","TypeScript","Supabase","css"],
+    summary: "React와 Supabase를 활용해 사용자별 학습 일정과 공부 시간을 관리하는 스터디 대시보드 웹 애플리케이션입니다. 사용자 인증 기반으로 학습 데이터를 분리하고 완료된 학습 시간을 주간 단위 그래프로 시각화했습니다.",
     bullets: [
-      "Supabase Auth + DB 연동으로 사용자별 CRUD 구현",
-      "user_id 기준 데이터 분리 및 created_at 정렬 처리",
-      "자정 기준 날짜 비교로 ‘오늘 할 일’ 상태 분기 처리",
-      "Recharts 기반 주간 학습 시간 시각화"
+      "Supabase Auth 기반 사용자 인증 및 사용자별 데이터 CRUD 구현",
+      "user_id 기준 학습 데이터 분리 및 created_at 정렬 처리",
+      "자정 기준 날짜 비교 로직으로 ‘오늘 할 일’ 상태 분기 처리",
+      "Recharts를 활용한 주간 학습 시간 시각화",
+      "기존 React(JavaScript) 프로젝트를 TypeScript로 마이그레이션하여 props, 상태, API 데이터 타입을 명확히 정의"
     ],
-    core: [],
     links:{
       github: "https://github.com/junhyuk2000/study_dashboard",
       live: "https://study-dashboard-junhyuk.netlify.app/login"
