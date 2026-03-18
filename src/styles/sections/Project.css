@@ -67,7 +67,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 60px 60px;
-    align-items: start;
+    align-items: stretch;
 }
 
 
@@ -78,6 +78,7 @@
 .card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 20px;
     padding: 20px;

@@ -110,6 +110,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: hidden; 
 }
 
 /* ✅ 빈공간 해결 핵심 */
@@ -119,7 +120,9 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-    animation: pmFadeIn 180ms ease-out;
+  overflow-y: auto; 
+  padding-right: 4px;
+  animation: pmFadeIn 180ms ease-out;
   will-change: opacity, transform;
 }
 

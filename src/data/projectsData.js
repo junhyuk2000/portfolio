@@ -20,6 +20,8 @@ export const projects = [
       live: "https://steam-renewal.netlify.app/"
     },
     detail:{
+      contribution: 
+        "50% ( 메인페이지 일부 섹션 UI 및 회원가입/로그인 퍼블리싱, 인증 흐름 구현 담당 )",
       reason:
         "바닐라 JavaScript로 멀티 스텝 폼과 인증 흐름을 직접 설계하며 DOM 제어·이벤트 흐름을 익히는 것을 목표로 했습니다. 실시간 유효성 검증과 시각적 피드백으로 입력 경험을 개선했습니다.",
       structure:
@@ -50,6 +52,8 @@ export const projects = [
       live: "https://lunest.netlify.app/"
     },
     detail:{
+      contribution: 
+        "60% ( 디자인 시안을 기반으로 메인페이지 UI 구성 및 퍼블리싱, 주요 기능 로직 구현 담당 )",
       reason:
         "mp3 폴더의 여러 트랙을 재생하는 커스텀 플레이어를 만들며 ‘오디오 상태를 UI로 제어하는 흐름’을 경험하는 것을 목표로 했습니다. 클릭 기반 재생, 진행바/시간 표시, 볼륨 조절 같은 핵심 동작을 직접 구현했습니다.",
       structure:
