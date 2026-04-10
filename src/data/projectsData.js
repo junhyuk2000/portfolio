@@ -96,32 +96,37 @@ export const projects = [
   { 
     id: 4,
     type: "Personal",
-    title: "weather",  
-    img:"/images/thumb/project_weather_thumb.jpg",
-    alt:"weather 썸네일", 
-    detail_img:"/images/detail/weather_detail.jpg",
-    skill:["html","css","JavaScript","React"],
-    summary: "OpenWeatherMap API를 활용해 현재 날씨와 예보 데이터를 가공·시각화한 날씨 애플리케이션입니다.",
+    title: "DevPrep",  
+    img:"/images/thumb/project_devprep_thumb.jpg",
+    alt:"DevPrep 썸네일", 
+    detail_img:"/images/detail/devprep_detail.jpg",
+    skill:["React","TypeScript","Zustand","Tailwind"],
+    summary: "프론트엔드 기술 면접 대비를 위한 문제 풀이 및 자기 평가 기반 학습 웹 서비스입니다.",
     bullets: [
-      "도시 검색 기반 현재 날씨 조회 및 주요 지표 카드화",
-      "UTC 시간을 한국 시간으로 변환해 예보 시간 정확도 보정",
-      "3시간 단위 예보를 오늘 기준 24시간 범위로 필터링 렌더링",
-      "5일 예보를 날짜 기준으로 정리해 표시"
+      "기술/문항 수 선택 후 면접 문제 세션 생성",
+      "문제 풀이 후 ‘정확 / 복습 필요 / 틀림’ 자기 평가 기록",
+      "카테고리별 통계 및 약점 기술 분석 제공",
+      "오답 및 복습 필요 문제만 다시 풀 수 있는 Review 모드 구현"
     ],
-    core: [],
+    core: [
+      "Zustand + persist를 활용한 세션 상태 관리 및 새 세션 초기화 구조 설계",
+      "문제 배열 재생성 방지를 위한 useMemo 기반 안정화 처리",
+      "Practice / Result 페이지 접근 가드 로직 구현",
+      "문제/기록 상태 분리로 재사용 가능한 학습 흐름 구조 설계"
+    ],
     links:{
-      github: "https://github.com/junhyuk2000/weather",
-      live: "https://weather-app-junhyuk.netlify.app/"
+      github: "https://github.com/junhyuk2000/devprep",
+      live: "https://devprep-project.netlify.app/"
     },
     detail:{
       reason:
-        "OpenWeatherMap API를 활용해 외부 데이터 연동과 비동기 처리 흐름을 경험하기 위해 제작했습니다. UTC 기준 시간 데이터를 한국 시간으로 변환해 현재 날씨와 예보 시간에 일관되게 적용했습니다.",
+        "프론트엔드 기술 면접 준비 과정에서 단순 암기가 아닌 반복 학습과 약점 분석이 가능한 서비스를 직접 만들어보고자 제작했습니다.",
       structure:
-        "도시 검색 → API 호출 → 응답 데이터 가공 → 상태 업데이트 흐름으로 구성했습니다. 3시간 단위 예보는 오늘 기준 24시간 범위로 필터링해 시간대별 카드 UI로 렌더링했고, 5일 예보는 날짜 기준으로 정리해 표시했습니다.",
+        "Setup → Practice → Result → Review 흐름으로 구성했습니다. 문제 데이터와 풀이 기록을 분리 관리하고, Zustand persist를 통해 새로고침 시에도 세션이 유지되도록 설계했습니다.",
       trouble:
-        "API에서 제공하는 시간 값이 UTC 기준이라 예보 시간이 실제 체감과 어긋나는 문제가 있었습니다. UTC 시간을 한국 시간으로 변환해 현재 날씨와 예보 시간 모두 정확히 맞추도록 수정했습니다."
+        "문제 배열이 렌더링마다 새로 생성되면서 현재 문제 index가 꼬이는 문제가 있었습니다. useMemo로 문제 배열을 고정해 해결했고, 세션 시작 시 상태를 초기화하는 구조로 안정성을 확보했습니다."
     }
-  },
+  }
 ];
 
 export const projectDetail = [

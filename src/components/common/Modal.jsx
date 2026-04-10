@@ -60,10 +60,11 @@ export default function Modal({ onClose, project }) {
 
           <div className="pm-right">
             <div className="pm-panel">
+              { project.detail.contribution && 
               <div className="pm-card">
                 <div className="pm-label">기여도</div>
                 <p className="pm-text">{project.detail?.contribution}</p>
-              </div>
+              </div> }
               <div className="pm-card">
                 <div className="pm-label">기술 선택 이유</div>
                 <p className="pm-text">{project.detail?.reason}</p>
