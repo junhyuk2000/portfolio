@@ -53,11 +53,9 @@ export default function Hero() {
         </h1>
 
         <p className="hero-desc">
-          React 기반으로 서비스형 웹 애플리케이션을 구현하는
-          프론트엔드 개발자 최준혁입니다.
-          <br />
-          사용자 흐름과 데이터 구조를 함께 고려해
-          명확한 UI를 만드는 것을 지향합니다.
+          기능 구현에 그치지 않고 상태 관리와 데이터 흐름을 함께 고민하며
+        <br />
+          사용자가 자연스럽게 이용할 수 있는 서비스를 만들고자 합니다.
         </p>
 
         <div className="hero-scroll" aria-label="Scroll down">
